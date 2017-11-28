@@ -15,7 +15,7 @@ app = Flask(__name__, static_folder='./public')
 
 @app.route("/")
 def index():
-    return render_template("home.html", features_names=preprocessor.feature_names, discrete_feature_domains = preprocessor.discrete_feature_domains)
+    return render_template("index.html", features_names=preprocessor.feature_names, discrete_feature_domains = preprocessor.discrete_feature_domains)
 
 @app.route("/predict", methods=['POST'])
 def predict():
