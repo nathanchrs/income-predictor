@@ -1,27 +1,33 @@
 var app = new Vue({
 	  el: '#app',
 	  data: {
-	    age: "?",
+	    age: null,
 	    workclass: "?",
-	    fnlwgt: "?",
+	    fnlwgt: null,
 	    education: "?",
-	    education_num: "?",
+	    education_num: null,
 	    marital_status: "?",
 	    occupation: "?",
 	    relationship: "?",
 	    race: "?",
 	    sex: "?",
-	    capital_gain: "?",
-	    capital_loss: "?",
-	    hours_per_week: "?",
+	    capital_gain: null,
+	    capital_loss: null,
+	    hours_per_week: null,
 	    native_country: "?",
 
       },       
       methods: {         
-      	getData: function() {             
-      		return [this.age, this.workclass, this.fnlwgt, this.education, this.education_num,
-      				this.marital_status, this.occupation, this.relationship, this.race, this.sex, this.capital_gain, 
-      				this.capital_loss, this.hours_per_week, this.native_country]         
+      	getData: function() {   
+      		var arr = [];
+      		for(x in this._data) {
+      			if(this[x] == null) {
+      				arr.push("?");
+      			} else {
+      				arr.push(this[x]);
+      			}
+      		}
+      		return arr
       	},
 
       	postData: function() {
