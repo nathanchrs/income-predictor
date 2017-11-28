@@ -49,6 +49,66 @@
 				    {% endfor %}		  
 				</select>
 			</div>
+
+			<div class="ui input">
+				<select v-model="occupation" class="ui compact selection dropdown">
+				  	<option selected disabled value="?">Occupation</option>
+				  	{% for x in discrete_feature_domains['occupation'] %}
+				  	<option value={{x}}> {{x}} </option>
+				    {% endfor %}		  
+				</select>
+			</div>
+
+			<div class="ui input">
+				<select v-model="relationship" class="ui compact selection dropdown">
+				  	<option selected disabled value="?">Relationship</option>
+				  	{% for x in discrete_feature_domains['relationship'] %}
+				  	<option value={{x}}> {{x}} </option>
+				    {% endfor %}		  
+				</select>
+			</div>
+
+			<div class="ui input">
+				<select v-model="race" class="ui compact selection dropdown">
+				  	<option selected disabled value="?">Race</option>
+				  	{% for x in discrete_feature_domains['race'] %}
+				  	<option value={{x}}> {{x}} </option>
+				    {% endfor %}		  
+				</select>
+			</div>
+
+			<div class="ui input">
+				<select v-model="sex" class="ui compact selection dropdown">
+				  	<option selected disabled value="?">Sex</option>
+				  	{% for x in discrete_feature_domains['sex'] %}
+				  	<option value={{x}}> {{x}} </option>
+				    {% endfor %}		  
+				</select>
+			</div>
+			
+
+			<div class="ui input">
+				<input type="number" v-model="capital_gain" placeholder="Capital Gain">
+			</div>
+			
+			<div class="ui input">
+				<input type="number" v-model="capital_loss" placeholder="Capital Loss">
+			</div>
+
+			<div class="ui input">
+				<input type="number" v-model="hours_per_week" placeholder="Hours per Week">
+			</div>
+
+			<div class="ui input">
+				<select v-model="native_country" class="ui compact selection dropdown">
+				  	<option selected disabled value="?">Native Country</option>
+				  	{% for x in discrete_feature_domains['native-country'] %}
+				  	<option value={{x}}> {{x}} </option>
+				    {% endfor %}		  
+				</select>
+			</div>
+			
+
 			<div class="ui input">
 				<input type="submit" value="Submit">
 			</div>
